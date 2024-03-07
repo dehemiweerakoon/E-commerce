@@ -1,0 +1,31 @@
+.feed{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-column-gap: 16px;
+    grid-row-gap: 30px;
+    margin-top: 15px;
+  
+}
+.card img{
+    width: 100%;
+    border-radius: 5px;
+    height: 250px;
+}
+.card h3{
+    color: gray;
+    text-wrap: wrap;
+}
+.card{
+      background-color:#f0e5d4;
+    padding: 15px 15px;
+    border-radius: 10px;
+}
+.card:hover{
+   color: brown;
+   box-shadow: 0 0 3px black;
+  margin-top: -10px;
+}
+.card p{
+    text-align: left;
+    font-size: small;
+}

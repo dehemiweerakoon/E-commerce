@@ -1,0 +1,32 @@
+.feed-search{
+    display: grid;
+    grid-template-columns: repeat(9,minmax(350px,1fr));
+    grid-column-gap: 16px;
+    grid-row-gap: 30px;
+    margin-top: 15px;
+    margin-left: 30px;
+    
+}
+.card-search img{
+    width: 100%;
+    border-radius: 5px;
+    height: 350px;
+}
+.card-search h3{
+    color: gray;
+    text-wrap: wrap;
+}
+.card-search{
+      background-color:#f0e5d4;
+    padding: 15px 15px;
+    border-radius: 10px;
+}
+.card-search:hover{
+   color: rgb(34, 19, 19);
+   box-shadow: 0 0 3px black;
+  margin-top: -10px;
+}
+.card-search p{
+    text-align: left;
+    font-size: small;
+}

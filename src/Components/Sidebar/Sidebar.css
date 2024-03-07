@@ -1,0 +1,27 @@
+.sidebar{
+    background: #f0e5d4;
+    width: 15%;
+    height: 100vh;
+    position:fixed;
+    top:0px;
+    padding-left: 2%;
+    padding-top: 90px;
+}
+.small-sidebar{
+   display: none;
+}
+.small-sidebar p{
+    display: none; 
+}
+.sortcut-links{
+    padding-top: 10px;
+    
+}
+.sortcut-links p{
+    /* text-decoration: none; */
+    /* color: black; */
+}
+.list-item{
+    margin-top: 10px;
+    margin:  10px 10px;
+}
