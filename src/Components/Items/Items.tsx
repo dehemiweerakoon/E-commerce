@@ -12,9 +12,10 @@ interface Product {
 
 const Items = () => {
   const [data,setData] = useState<Product[]>([]);
+  
   const fetchData = async () => {
     try {
-      const videoList_url = `https://dummyjson.com/products?limit=100`;
+      const videoList_url = `https://dummyjson.com/products`;
       const response = await fetch(videoList_url);
       
       if (!response.ok) {
@@ -32,8 +33,10 @@ const Items = () => {
   useEffect(()=>{
     fetchData();
   },[])
+  if(data.length==0){return(<p>Loading.....O</p>)}
   return (
     <div className="feed"> 
+    
     {data.map((item,index)=>{
      return(
           <Link to ={`/item/${item.id}`} className='card'>

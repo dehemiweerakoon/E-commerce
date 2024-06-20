@@ -1,8 +1,13 @@
 import { useEffect, useState } from 'react'
 import './Sidebar.css'
 import { Link } from 'react-router-dom';
+interface Cat{
+  slog:string 
+  name:string
+  url:string
+}
 const Sidebar = ({sidebar}:any) => {
-  const [data,setData] = useState([]);
+  const [data,setData] = useState<Cat[]>([]);
   const fetchData = async () => {
     try {
       const videoList_url = `https://dummyjson.com/products/categories`;
@@ -22,13 +27,16 @@ const Sidebar = ({sidebar}:any) => {
   useEffect(()=>{
    fetchData();
   },[])
+  if(data.length==0){return(<p>Loading.....O</p>)}
   return (
     <div className={`sidebar ${sidebar?"":"small-sidebar"}`}>
        <div className="sortcut-links">
-        {data.map((item,index)=>{
+        {
+         
+        data.map((item,index)=>{
           return(
-         <Link to ={`/category/${item}`} className='text-decoration-none list-item'>
-           <p>{item}</p>
+         <Link to ={`/category/${item.name}`} className='text-decoration-none list-item'>
+           <p>{item.name}</p>
          </Link>
           )
         })}

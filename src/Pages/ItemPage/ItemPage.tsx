@@ -95,7 +95,9 @@ const ItemPage = () => {
             </svg>
           </button>
           
-        </div><button className="flex mt-5 ml-auto text-white bg-yellow-500 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-600 rounded" >View Cart</button>
+        </div>
+        <Link to={"../../cart"} ><button className="flex mt-5 ml-auto text-white bg-yellow-500 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-600 rounded">View Cart</button>
+      </Link>
       </div>
       <img alt="ecommerce" className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src={`${data?.images[item]}`}
        onClick={()=>{if(item+1===(data?.images.length)){
